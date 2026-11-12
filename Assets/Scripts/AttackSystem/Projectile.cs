@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
     [SerializeField] private Rigidbody2D _rb;
 
     [SerializeField] AudioClip _spawnSound;
-    private int _damage = 5;
+    private int _damage = 50;
 
     private float _moveSpeed;
     private Vector2 _direction = Vector2.zero;
@@ -27,7 +27,7 @@ public class Projectile : MonoBehaviour
         if (collision.TryGetComponent(out Health health))
         {
             health.TakeDamage(_damage);
-            Debug.Log("Weapon Damage: " + _damage);
+            Debug.Log("Attack Damage: " + _damage);
             Destroy(gameObject);
         }
     }

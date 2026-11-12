@@ -6,10 +6,11 @@ using System;
 public class PlayerCharacter : MonoBehaviour
 {
     [SerializeField] private AttackData _startingAttackData;
+    private GameController _gameController;
 
     private void Awake()
     {
-        //_gameController = FindAnyObjectByType<GameController>();
+        _gameController = FindAnyObjectByType<GameController>();
     }
 
     private void Start()
